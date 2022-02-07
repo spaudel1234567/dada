@@ -1,0 +1,26 @@
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class title {
+
+public static void main(String[] args) {
+// TODO Auto-generated method stub
+	System.setProperty("webdriver.chrome.driver","D:\\Downloads\\chromedriver_win32\\chromedriver.exe");
+ChromeDriver driver = new ChromeDriver();
+driver.get("https://www.google.co.in/");
+driver.manage().window().maximize();
+String str=driver.getTitle();
+String str1=driver.getCurrentUrl();
+System.out.println("title of this web is'"+str+"'");
+System.out.println("url of this web is'"+str1+"'");
+
+if(str.equals("Google") && str1.equals("https://www.google.co.in/") ){
+ System.out.println(true);}
+
+else {
+
+System.out.println(false);
+}
+
+
+}
+}
