@@ -1,0 +1,40 @@
+package tri;
+
+import java.util.Scanner;
+
+public class tri123 {
+	public static void main(String[] args){
+		Scanner s=new Scanner(System.in);
+		int O=1;
+		do{
+		System.out.println("Enter 3 inputs which are the sides of a triangle");
+		int a=s.nextInt();
+		int b=s.nextInt();
+		int c=s.nextInt();
+		if(a<=200 && b<=200 && c<=200 && a>=1 && b>=1 && c>=1)
+		{
+		if(a<b+c && b<a+c && c<a+b){
+		if(a==b && b==c)
+		{
+		System.out.println("It is an equilateral triangle\n");
+		}
+		else if(a==b||b==c||c==a)
+		{
+		System.out.println("It is an isoceles triangle\n");
+		}
+		else
+		{
+		System.out.println("It is a scalene triangle\n");
+		}
+		}
+		else
+		System.out.println("It is not a triangle\n");
+		}
+		else
+		System.out.println("Invalid input\nEnter sides within the range 1-200\n");
+		System.out.println("1. To enter input\n 2.to exit\nEnter your choice ");
+		O=s.nextInt();
+		}while(O!=2);
+		s.close();
+		}
+		}
